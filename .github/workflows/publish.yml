@@ -1,0 +1,16 @@
+
+name: Copy
+on: push
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Copycat
+      uses: andstor/copycat-action@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        src_path: /note/docs/
+        dst_path: /docs/
+        dst_owner: math4mads
+        dst_repo_name: copycat-action

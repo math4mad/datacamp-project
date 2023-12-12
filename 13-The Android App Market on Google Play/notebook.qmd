@@ -1,0 +1,35 @@
+---
+title: "The Android App Market on Google Play"
+author: math4mad
+code-fold: true
+---
+
+:::{.callout-note title="introduction"}
+[The Android App Market in Google Play](https://www.datacamp.com/blog/60-python-projects-for-all-levels-expertise)
+:::
+
+## 1. load data
+```{julia}
+using CSV,DataFrames,Tidier,GLMakie
+df=CSV.File("./datasets/apps.csv")|>DataFrame|>unique
+```
+## 2. data clean
+```{julia}
+# cleaned_data = @chain df begin
+#     @mutate(Size = if_else(occursin('k',Size...),replace(Size, "k"=>""), Size))
+# end
+df2=copy(df)
+# for row in eachrow(df2)
+#     if occursin("k",string(row.Size))
+#        replace!(row.Size, "k"=>""|>d->d*1000)
+#     end
+# end
+
+  for row in eachrow(df2)
+  
+  end
+
+```
+
+
+
