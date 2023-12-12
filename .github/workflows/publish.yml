@@ -1,6 +1,6 @@
 
 name: Copy
-on: push
+on: [push]
 
 jobs:
   copy:
